@@ -1,0 +1,9 @@
+<h3>Créer un nouvel article</h3>
+
+<%= form_tag "/articles/create", method: 'post' do %>
+<input type="text" name="title" placeholder="Titre de l'article (obligatoire)" size="80" required />
+<br/>
+<textarea name="content" rows="20" cols="80" placeholder="Rédigez votre article..." required></textarea>
+<br/>
+<input type="submit" value="Publier cet article !"  />
+<% end %>

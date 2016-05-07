@@ -1,0 +1,134 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+header{
+  background-color: #dddddd;
+  padding: 18px 30px 10px 30px;
+}
+
+header h1{
+  color:#222288;
+  font-variant: small-caps;
+  margin: 0px;
+  font-size: 36px;
+}
+
+header h3{
+  color:#111111;
+  margin: 10px 0px 10px 0px;
+  font-size: 18px;
+}
+
+#main_nav{
+  font-variant: small-caps;
+  font-family: Verdana;
+  font-size: 16px;
+  background-color : #555555;
+}
+
+#main_nav table{
+  border-collapse: collapse;
+}
+
+#main_nav td{
+  padding: 15px 0px 15px 0px;
+}
+
+
+#main_nav td:hover{
+  background-color : #111111;
+}
+
+#main_nav a{
+  text-decoration: none;
+  color:#eeeeee;
+  padding: 15px 30px 15px 30px;
+}
+
+#main_nav a:hover{
+  color:#eeeeee;
+  cursor: default;
+}
+
+body{
+  margin : 0px 0px 0px 0px;
+}
+
+#content{
+  padding: 15px 30px 10px 30px;
+  font-family: Arial;
+}
+
+#content h3{
+  font-variant: small-caps;
+  font-size: 18px;
+}
+
+
+a{
+  color:#111111;
+  padding:3px;
+}
+
+a:hover
+{
+  color:#5555CC;
+
+}
+
+.article{
+  min-height: 120px;
+}
+
+.article p{
+  font-size: 14px;
+}
+
+.article h2{
+  color:#222288;
+  font-size: 24px;
+}
+
+.comments{
+  padding: 40px 0px 15px 0px;
+}
+
+.comments table{
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.comments td.commentrow{
+  border-style: solid;
+  border-color: white;
+  background-color: #e0e0e0;
+  border-width: 1px;
+  border-collapse: collapse;
+  padding: 4px 8px 4px 8px;
+  width : 95%;
+
+}
+
+.comments td.deleterow{
+  border-style: none;
+  border-collapse: collapse;
+  padding-left: 12px;
+  width : 10%;
+  vertical-align: bottom;
+}
+
+.comments em{
+  font-size: 10px;
+}

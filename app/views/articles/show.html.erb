@@ -1,0 +1,46 @@
+<article class="article">
+  <h2>"<%= @article.title %>"</h2>
+  <p>
+    <%= @article.content %>
+  </p>
+</article>
+
+<article class="comments">
+  <hr/>
+  <h3>Poster un commentaire</h3>
+  <%= form_tag "/comments/#{@article.id}", method: 'post' do %>
+  <input type="text" name="author" placeholder="Auteur (obligatoire)" required />
+  <br/>
+  <textarea name="content" rows="5" cols="50" placeholder="Ecrivez votre commentaire..." required></textarea>
+  <br/>
+  <input type="submit" value="Ajoutez ce commentaire!"  />
+  <% end %>
+
+  <h3>Commentaires</h3>
+  <% if @article.comments.size != 0 %>
+  <% @article.comments.reverse_each do |comment| %>
+  <table>
+    <tr>
+      <td class="commentrow">
+        <b><%= comment.author %></b> <em>a posté à <%= comment.created_at %></em> :
+      </td>
+      <td class="deleterow">
+      </td>
+    </tr>
+    <tr>
+      <td class="commentrow">
+        <%= comment.content %>
+      </td>
+      <td class="deleterow">
+        <%= form_tag "/comments/#{comment.id}", method: 'delete' do %>
+        <input type="submit" value="Supprimez">
+        <% end %>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <% end %>
+  <% else %>
+  <p>Aucun commentaire pour cet article</p>
+  <% end %>
+</article>

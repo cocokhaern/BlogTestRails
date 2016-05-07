@@ -1,0 +1,8 @@
+<h3>Tous les articles</h3>
+
+<%= paginate  @articles %>
+<% @articles.each do |article| %>
+<ul>
+<li><a href="articles/<%= article.id %>"><%= article.title %></a></li>
+</ul>
+<% end %>

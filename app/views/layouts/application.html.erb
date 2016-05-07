@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog de CocoKhaern</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header> <!-- Je rajoute un header pour la forme -->
+  <h1>le blog de CocoKhaern</h1>
+  <h3>Un exercice Ruby on Rails, réalisé pour Open Classrooms</h3>
+</header>
+<nav id="main_nav">
+  <table>
+    <tr>
+      <td>
+        <a href="/">Tous les articles</a>
+      </td>
+      <td>
+        <a href="/newarticle">Créer un article</a>
+      </td>
+      <td>
+        <a href="/about">A propos</a>
+      </td>
+    </tr>
+  </table>
+</nav>
+
+<div id="content">
+
+<%= yield %>
+
+</div>
+
+</body>
+
+</html>
